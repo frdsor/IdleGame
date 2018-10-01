@@ -5,7 +5,6 @@
 		<title>KlappeSpill</title>
 		<link rel="stylesheet" type="text/css" href="interface.css" />
 		<meta charset="utf-8"/>
-
 	</head>
 	<body>
 		<h1> Herru you, klappe?!</h1>
@@ -14,12 +13,12 @@
 		</ul>
 			<img src="https://loremflickr.com/320/240" alt="placeholder"/>
 			<p style="
-	    		width: 50%;
-	    		background-color: #00BCD4;
+	    		width: 25%;
+	    		background-color: powderblue;
 				"> #Klapp: <span style="color:blue;font-weight:bold" id="click"> </span> </p>
 			<button type="click" onclick="normalClick(1)">Klapp pusen</button>
 			<button type="upgrade" onclick="upgradeFirst()" > 
-			Klappere: <span id="cursors">0</span> <br />
+			#Klappere: <span id="cursors">0</span> <br />
 			Pris: <span id="cursorsCost">10</span>
 			</button>
 		</br>
