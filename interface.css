@@ -18,6 +18,15 @@ button:hover{
     transition: background 400ms, color 200ms 100ms linear;
 }
 
+.saveLoad{
+  font-size: 20px;
+  padding: 20px;
+  width: 100px;
+  border: 5px;
+  border-radius: 100px;
+  background: pink;
+}
+
 
 h1 {
     font-size: 40px;
@@ -59,24 +68,17 @@ h1 {
     background: url(keyboard-cat-bento-2.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
-    animation: move 3s;
+    animation: move 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 
 @keyframes move {
-  0% {
-    transform: translateX(10);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0deg);
-    transform: translateX(90vw);
-  }
-}    
+    25% { transform: skewX(15deg); }
+    50% { transform: skewX(0deg) scale(2); }
+    75% { transform: skewX(15deg); 
+    } 
 
 
-}
