@@ -17,8 +17,8 @@
 		<div class="boks2"> 
 			<img src="https://loremflickr.com/320/240" alt="placeholder"/>
 			<p style="
-	    		width: 25%;
-	    		background-color: powderblue;
+							width: 25%;
+							background-color: powderblue;
 				"> #Klapp: <span style="color:blue;font-weight:bold" id="click"> </span> </p>
 
 			<button type="click" onclick="normalClick(1)">Klapp pusen</button>

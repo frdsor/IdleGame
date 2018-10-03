@@ -3,22 +3,21 @@ body {
 }
 
 button{
- border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(255, 0, 255, 0.3);
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
+  font-size: 20px;
+  padding: 20px;
+  border: 5px;
+  border-radius: 10px;
+  color: white;
+  background: #4fc7ef;
 }
+
+button:hover{
+    color: black;
+    transform: scale(1.1);
+    background: DeepPink;
+    transition: background 400ms, color 200ms 100ms linear;
+}
+
 
 h1 {
     font-size: 40px;
@@ -36,7 +35,7 @@ h1 {
     padding: 0px;    
     border: 5px solid pink;    
     margin: 5px;
-    background-color: powderblue;
+    background-color: powderblue; 
 }
 
 .boks2 {
@@ -49,4 +48,35 @@ h1 {
     border: 5px solid pink;    
     margin: 0px;
     background-color: powderblue;
+}
+
+.boks3 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px;
+    border-top-color: transparent;
+    background: url(keyboard-cat-bento-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: move 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes move {
+  0% {
+    transform: translateX(10);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(90vw);
+  }
+}    
+
+
 }
