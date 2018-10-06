@@ -18,6 +18,13 @@ button:hover{
     transition: background 400ms, color 200ms 100ms linear;
 }
 
+.save{
+	text-align: center;
+}
+
+.klikkeButtons{
+	text-align: center;
+}
 .saveLoad{
   font-size: 20px;
   padding: 20px;
@@ -27,24 +34,39 @@ button:hover{
   background: pink;
 }
 
+.reset{
+  font-size: 10px;
+  padding: 10px;
+  width: 50px;
+  border: 5px;
+  border-radius: 100px;
+  background: grey;
+}
+
 
 h1 {
     font-size: 40px;
     font-family: "Arial", Helvetica, sans-serif;
     color: deepPink;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .min-boks {
 	font-size: 20px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;    
+    width: 10%;    
     height: 100px;    
     padding: 0px;    
     border: 5px solid pink;    
-    margin: 5px;
-    background-color: powderblue; 
+    background-color: powderblue;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .boks2 {
@@ -55,7 +77,7 @@ h1 {
     height: 400px;    
     padding: 0px;    
     border: 5px solid pink;    
-    margin: 0px;
+    margin: 0 auto;
     background-color: powderblue;
 }
 
@@ -64,6 +86,7 @@ h1 {
     width: 100px;
     border-radius: 50%;
     border: 5px;
+    margin: 0 auto;
     border-top-color: transparent;
     background: url(keyboard-cat-bento-2.jpeg);
     background-repeat: no-repeat;

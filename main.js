@@ -1,31 +1,42 @@
 var click = 0;
-var cursors = 0;
+var klappere = 0;
+var totalClick = 0;
 
 
 
 function normalClick(number){
 	click = click + number;
-	document.getElementById("click").innerHTML = click;
+	document.getElementById("click").innerHTML = prettify(click);
 };
+
+function getTotal(){
+	console.log("kek");
+	document.getElementById("totalClick").innerHTML = prettify(totalClick);
+}
 
 
 function upgradeFirst(){
-	var cursorsCost = Math.floor(10  * Math.pow(1.1,cursors));
-	if(click >= cursorsCost){
-		cursors = cursors + 1;
-		click = click - cursorsCost;
-		document.getElementById('cursors').innerHTML = cursors;
-		document.getElementById('click').innerHTML = click;
+	var klappereCost = Math.floor(10  * Math.pow(1.1,klappere));
+	if(click >= klappereCost){
+		klappere = klappere + 1;
+		click = click - klappereCost;
+		document.getElementById('klappere').innerHTML = prettify(klappere);
+		document.getElementById('click').innerHTML = prettify(click);
 	};
-	var nextCost = Math.floor(10* Math.pow(1.1,cursors));
-	document.getElementById("cursorsCost").innerHTML = nextCost;
+	var nextCost = Math.floor(10* Math.pow(1.1,klappere));
+	document.getElementById("klappereCost").innerHTML = prettify(nextCost);
 };
+
+function prettify(number){
+    var output = Math.round(number * 1000000)/1000000;
+	return output;
+}
 
 function save(){
 	var save = {
 		click: click,
-		cursors: cursors,
-		cursorsCost: cursorsCost
+		klappere: klappere,
+		klappereCost: klappereCost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -35,11 +46,11 @@ function load(){
 	if (typeof savegame.click !== "undefined"){
 	 click = savegame.click;
 	}
-	if (typeof savegame.cursors !== "undefined"){
-	 cursors = savegame.cursors;
+	if (typeof savegame.klappere !== "undefined"){
+	 klappere = savegame.klappere;
 	 }
-	 if(typeof savegame.cursorsCost !== "undefined"){
-	 	cursorsCost = savegame.cursorsCost;
+	 if(typeof savegame.klappereCost !== "undefined"){
+	 	klappereCost = savegame.klappereCost;
 	 }
 }
 
@@ -48,5 +59,5 @@ function reset(){
 }
 
 window.setInterval(function(){
-normalClick(cursors);
+normalClick(klappere);
 }, 1000);
